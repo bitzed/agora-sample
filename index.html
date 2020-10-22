@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Sample</title>
+</head>
+<body>
+<div class="video-view">
+  <div id="local_stream" class="video-placeholder"></div>
+  <div id="local_video_info" class="video-profile hide"></div>
+  <div id="video_autoplay_local" class="autoplay-fallback hide"></div>
+</div>
+<div id="logMessage">ステンバーイ</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/AgoraRTCSDK-3.2.1.js"></script>
+<script>
+window.onload = function(){
+  initialize();
+  $("#join").click(function(){
+    join();
+  });
+  $("#leave").click(function(){
+    leave();
+  });
+};
+</script>
+
+<div id="toolbar">
+  <button id="join">Join</button>
+  <button id="leave">Leave</button>
+</div>
+</body>
+</html>
